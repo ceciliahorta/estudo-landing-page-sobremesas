@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Landing Page - Sobremesas</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/sorvete.png" alt="">
+            <h1>IceCream</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Produtos</li>
+                <li>Contatos</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="list">
+
+            <div class="item active">
+                <div class="product-img">
+                    <img src="./img/banana_split.png" alt="Imagem de Banana Split">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Clássico Refrescante</p>
+                    <p class="product-name">Banana Split</p>
+                    <p class="description">
+                        Uma explosão de sabores com banana, sorvete, cobertura de chocolate, morango e chantilly. Ideal
+                        para os dias quentes ou para aquele momento de pura indulgência.
+                    </p>
+
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="product-img">
+                    <img src="./img/petit_gateau.png" alt="Imagem de Petit Gateau">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Delícia Quentinha</p>
+                    <p class="product-name">Petit Gâteau</p>
+                    <p class="description">
+                        Bolo de chocolate com casquinha crocante e recheio cremoso, servido com sorvete de baunilha e
+                        calda quente. Um clássico francês que derrete no paladar.
+                    </p>
+
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="product-img">
+                    <img src="./img/acai.png" alt="Imagem de Açaí">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Energia Natural</p>
+                    <p class="product-name">Açaí com Frutas</p>
+                    <p class="description">
+                        Uma tigela cheia de sabor e saúde: açaí cremoso com morangos, banana, mirtilos e granola
+                        crocante. Perfeito para recarregar as energias com muito estilo.
+                    </p>
+
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button class="arrow-btn" id="prev"><</button>
+
+            <button class="arrow-btn" id="next">></button>
+        </div>
+
+        <div class="indicators">
+
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
