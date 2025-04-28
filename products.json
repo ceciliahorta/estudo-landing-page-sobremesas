@@ -1,0 +1,100 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Gelato de Pistache",
+      "imagem": "sorvete_pistache.png",
+      "descricao": "Sabor autêntico e cremosidade italiana com toque de pistache torrado.",
+      "preco": 19.90,
+      "categoria": "Sorvetes e Gelatos"
+    },
+    {
+      "id": 2,
+      "nome": "Sorvete de Morango Natural",
+      "imagem": "sorvete_morango.png",
+      "descricao": "Feito com frutas frescas e sem corantes artificiais.",
+      "preco": 15.50,
+      "categoria": "Sorvetes e Gelatos"
+    },
+    {
+      "id": 3,
+      "nome": "Sorvete Napolitano",
+      "imagem": "sorvete_napolitano.png",
+      "descricao": "Clássico trio de chocolate, morango e baunilha em camadas perfeitas.",
+      "preco": 17.00,
+      "categoria": "Sorvetes e Gelatos"
+    },
+    {
+      "id": 4,
+      "nome": "Gelato de Chocolate Belga",
+      "imagem": "sorvete_chocolate.png",
+      "descricao": "Chocolate 70% cacau, cremoso e intensamente saboroso.",
+      "preco": 20.50,
+      "categoria": "Sorvetes e Gelatos"
+    },
+    {
+      "id": 5,
+      "nome": "Brownie com Nozes",
+      "imagem": "brownie_nozes.png",
+      "descricao": "Massa densa de chocolate com pedaços crocantes de noz.",
+      "preco": 22.00,
+      "categoria": "Sobremesas Quentes"
+    },
+    {
+      "id": 6,
+      "nome": "Fondue de Chocolate",
+      "imagem": "fondue_chocolate.png",
+      "descricao": "Chocolate derretido com frutas e marshmallows para mergulhar.",
+      "preco": 29.90,
+      "categoria": "Sobremesas Quentes"
+    },
+    {
+      "id": 7,
+      "nome": "Churros Recheados",
+      "imagem": "churros_recheados.png",
+      "descricao": "Churros crocantes recheados com doce de leite ou chocolate.",
+      "preco": 18.50,
+      "categoria": "Sobremesas Quentes"
+    },
+    {
+      "id": 8,
+      "nome": "Crepe de Nutella",
+      "imagem": "crepe_nutella.png",
+      "descricao": "Crepe quentinho recheado com Nutella e morangos frescos.",
+      "preco": 21.00,
+      "categoria": "Sobremesas Quentes"
+    },
+    {
+      "id": 9,
+      "nome": "Pudim de Leite Condensado",
+      "imagem": "pudim.png",
+      "descricao": "Tradicional, com calda dourada e textura macia.",
+      "preco": 15.00,
+      "categoria": "Clássicos de Padaria"
+    },
+    {
+      "id": 10,
+      "nome": "Torta de Limão",
+      "imagem": "torta_limao.png",
+      "descricao": "Base crocante, recheio cremoso e cobertura de merengue.",
+      "preco": 18.00,
+      "categoria": "Clássicos de Padaria"
+    },
+    {
+      "id": 11,
+      "nome": "Cheesecake de Frutas Vermelhas",
+      "imagem": "bolo_frutas_vermelhas.png",
+      "descricao": "Recheio suave de cream cheese com calda artesanal.",
+      "preco": 22.50,
+      "categoria": "Clássicos de Padaria"
+    },
+    {
+      "id": 12,
+      "nome": "Bolo Red Velvet",
+      "imagem": "bolo_red_velvet.png",
+      "descricao": "Massa aveludada vermelha com cobertura cremosa de cream cheese.",
+      "preco": 24.00,
+      "categoria": "Clássicos de Padaria"
+    }
+  ]
+}

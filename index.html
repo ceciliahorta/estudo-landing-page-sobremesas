@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="./Styles/products.css">
     <title>Landing Page - Sobremesas</title>
 </head>
 
@@ -17,14 +18,14 @@
 
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Produtos</li>
-                <li>Contatos</li>
+                <li><a href="#main-section">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-section">
 
         <div class="list">
 
@@ -95,6 +96,15 @@
             </div>
         </div>
     </main>
+
+    <section class="products_container" id="produtos">
+        <h2>
+            Confira nossas sobremesas! 
+        </h2>
+
+        <div class="cards_container" id="cards_container"></div>
+
+    </section>
 
     <script src="script.js"></script>
 </body>
