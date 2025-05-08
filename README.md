@@ -13,3 +13,5 @@ A landing page apresenta três sobremesas diferentes (Banana Split, Petit Gâtea
 - Transições automáticas entre as imagens
 - Animação de destaque visual e botão interativo
 - Navegação manual com setas
+- Área de produtos separados por categoria;
+- Lista de pedidos (podem ser adicionados ou removidos da lista).
