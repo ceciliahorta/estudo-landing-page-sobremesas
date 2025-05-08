@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/styles.css">
     <link rel="stylesheet" href="./Styles/products.css">
+    <link rel="stylesheet" href="./Styles/cart.css">
     <title>Landing Page - Sobremesas</title>
 </head>
 
@@ -20,7 +21,8 @@
             <ul>
                 <li><a href="#main-section">Home</a></li>
                 <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <div id="cart-icon">🛒</div>
             </ul>
         </nav>
     </header>
@@ -83,8 +85,8 @@
 
         <div class="arrows">
             <button class="arrow-btn" id="prev"><</button>
-
             <button class="arrow-btn" id="next">></button>
+
         </div>
 
         <div class="indicators">
@@ -99,12 +101,20 @@
 
     <section class="products_container" id="produtos">
         <h2>
-            Confira nossas sobremesas! 
+            Confira nossas sobremesas!
         </h2>
 
         <div class="cards_container" id="cards_container"></div>
 
     </section>
+
+    <section id="pedidos" class="orders-section">
+        <h2>Seus Pedidos</h2>
+        <div id="cart-items"></div>
+
+        <p id="total-price">Total: R$ 0.00</p>
+    </section>
+
 
     <script src="script.js"></script>
 </body>

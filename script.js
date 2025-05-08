@@ -144,7 +144,11 @@ async function productsByCategorya() {
 
           const button = document.createElement('button');
           button.classList.add('btn');
-          button.textContent = 'Saiba Mais'
+          button.textContent = 'Adicionar ao Carrinho';
+          button.addEventListener('click', () => {
+            addToCart(produto);
+          });
+
 
           infoContainer.appendChild(h3);
           infoContainer.appendChild(p);
@@ -163,4 +167,104 @@ async function productsByCategorya() {
   } catch (error) {
     productsContainer.innerHTML = '<p>Erro ao carregar produtos.</p>'
   }
+}
+
+/* Carrinho de Pedidos */
+
+let cart = [];
+
+function addToCart(produto) {
+  const existingItem = cart.find(item => item.id === produto.id);
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push({ ...produto, quantity: 1 })
+  }
+  updateCart();
+  animateCartIcon();
+}
+
+function updateCart() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = "";
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const li = document.createElement("li");
+    li.classList.add('cart-item');
+
+    const itemName = document.createElement("span");
+    itemName.classList.add('item-name');
+    itemName.textContent = item.nome;
+    li.appendChild(itemName);
+
+    const quantityControls = document.createElement("div");
+    quantityControls.classList.add('quantity-controls');
+
+    const decreaseButton = document.createElement("button");
+    decreaseButton.textContent = "-";
+    decreaseButton.addEventListener('click', () => decreaseQuantity(item.id));
+    quantityControls.appendChild(decreaseButton);
+
+    const increaseButton = document.createElement("button");
+    increaseButton.textContent = "+";
+    increaseButton.addEventListener('click', () => increaseQuantity(item.id));
+    quantityControls.appendChild(increaseButton);
+
+    const itemPrice = document.createElement("span");
+    itemPrice.classList.add('item-price');
+    itemPrice.textContent = `R$ ${(item.preco * item.quantity).toFixed(2)}`;
+    li.appendChild(itemPrice);
+
+    if (item.quantity > 1) {
+      const quantityDisplay = document.createElement('div');
+      quantityDisplay.classList.add('quantity-display');
+      quantityDisplay.textContent = `(${item.quantity})`;
+      li.appendChild(quantityDisplay);
+    }
+
+    li.appendChild(quantityControls);
+
+    cartItemsContainer.appendChild(li);
+    total += item.preco * item.quantity;
+  });
+
+  const totalElement = document.getElementById("total-price");
+  totalElement.textContent = 'Total: R$ ' + total.toFixed(2);
+}
+
+function increaseQuantity(itemId) {
+  const item = cart.find(item => item.id === itemId);
+  if (item) {
+    item.quantity++;
+    updateCart();
+  }
+}
+
+function decreaseQuantity(itemId) {
+  const item = cart.find(item => item.id === itemId);
+  if (item && item.quantity > 1) {
+    item.quantity--;
+    updateCart();
+  } else if (item && item.quantity === 1) {
+    removeItem(itemId);
+  }
+}
+
+function removeItem(itemId) {
+  cart = cart.filter(item => item.id !== itemId);
+  updateCart();
+}
+
+
+/* Animação do Carrinho */
+
+function animateCartIcon() {
+  const cartIcon = document.getElementById('cart-icon');
+  cartIcon.classList.add('fly-animation');
+
+  cartIcon.addEventListener('animationend', () => {
+    cartIcon.classList.remove('fly-animation');
+  }, { once: true });
 }
